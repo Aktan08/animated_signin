@@ -20,43 +20,59 @@ class Sun extends StatelessWidget {
       duration: _duration,
       curve: Curves.easeInOut,
       left: getProportionateScreenWidth(30),
-      bottom: getProportionateScreenWidth(isFullSun ? -45 : -120),
-      child: Container(
-        width: 310.879,
-        height: 310.879,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: Color.fromRGBO(255, 221, 0, 0.1),
-        ),
-        child: Center(
-          child: Container(
-              width: 310.879 - 50,
-              height: 310.879 - 50,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: Color.fromRGBO(255, 221, 0, 0.2),
-              ),
-              child: Center(
-                child: Container(
-                  width: 310.879 - 100,
-                  height: 310.879 - 100,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Color.fromRGBO(255, 221, 0, 0.3),
-                  ),
-                  child: Center(
-                    child: Container(
-                      width: 310.879 - 150,
-                      height: 310.879 - 150,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Color.fromRGBO(255, 221, 0, 1),
-                      ),
+      bottom: getProportionateScreenWidth(isFullSun ? -45 : -200),
+      child: Sun_widget(),
+    );
+  }
+}
+
+
+
+
+
+
+class Sun_widget extends StatelessWidget {
+  const Sun_widget({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 310.879,
+      height: 310.879,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: Color.fromRGBO(255, 221, 0, 0.1),
+      ),
+      child: Center(
+        child: Container(
+            width: 310.879 - 50,
+            height: 310.879 - 50,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Color.fromRGBO(255, 221, 0, 0.2),
+            ),
+            child: Center(
+              child: Container(
+                width: 310.879 - 100,
+                height: 310.879 - 100,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Color.fromRGBO(255, 221, 0, 0.3),
+                ),
+                child: Center(
+                  child: Container(
+                    width: 310.879 - 150,
+                    height: 310.879 - 150,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Color.fromRGBO(255, 221, 0, 1),
                     ),
                   ),
                 ),
-              )),
-        ),
+              ),
+            )),
       ),
     );
   }

@@ -77,7 +77,7 @@ class _BodyState extends State<Body> {
       ),
       child: Stack(
         children: [
-          Sun(duration: _duration,  isFullSun: isFullSun),
+          Sun(duration: _duration, isFullSun: isFullSun),
           Land(),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
